@@ -10,8 +10,18 @@
 body{
     font-family: 'Lato',sans-serif;
 }
+.topspace{
+    height: 75px;
+}
 .mainmenu{
     height:75px;
+    position: fixed;
+    width:100%;
+    top:0;
+    left:0;
+    display: inline-block;
+    z-index: 1001;
+    background-color: white;
 }
 .mainmenu img{
     height: 65px;
@@ -188,6 +198,23 @@ body{
     padding-top: 3%;
     padding-bottom: 3%;
 }
+.greenBar2{
+    display: none;
+}
+.greenBar .col-xs-4{
+    -webkit-transition: ease all .3s;
+    transition: ease all .3s;
+}
+.greenBar .col-xs-4:hover{
+    background-color: rgba(200,200,200,.5);
+}
+.greenBar .col-xs-4>span{
+    color: white;
+    text-align: center;
+    display: block;
+    width:100%;
+    font-size: 14px;
+}
 .homepageInfo h1{
     color: #0B4E2A;
     font-size: 1.5vw;
@@ -264,6 +291,26 @@ body{
     cursor: pointer;
     color:white!important;
 }
+.mobMenu{
+    display: none;
+}
+#mobileMenu{
+    display: none;
+    background-color: #0B4E2A;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 25vw;
+}
+#mobileMenu>a{
+    color: white;
+    font-size: 8vw;
+    line-height: 16vw;
+    display: block;
+    width:100%;
+    padding-left: 25px;
+}
 
 
 /*MEDIA QUERIES*/
@@ -276,22 +323,55 @@ body{
 @media(max-width:1600px){
     
 }
-#warnwarn{
-    font-size: 6vw;
-    width:100%;
-    text-align: center;
-    display: none;
-    color: black;
-    cursor: inherit;
-    text-decoration: none!important;
-}
 /*IPAD PRO AND SMALLER LAPTOPS*/
 @media(max-width:1024px){
-    body{
+    .bot, .top{
         display: none;
     }
-    #warnwarn{
-        display: block!important;;
+    .mainmenu{
+        height:60px;
+    }
+    .topspace{
+    height: 60px;
+}
+    .mainmenu img{
+        height: 54px;
+        float: left;
+        padding-top: 5px;
+    }
+    .mobMenu{
+        color: #0B4E2A!important;
+        float: right;
+        font-size: 42px;
+        display: inline-block!important;
+    }
+    .mobMenu:hover, .mobMenu:visited, .mobMenu:active{
+        color: #0B4E2A!important;
+    }
+    .sbaBTN{
+        font-size: 3vw;
+        display: inline-block;
+        margin-right:.5vw;
+        padding:0;
+        padding-left: 2vw;padding-right: 2vw;
+        height: 5vw;
+        line-height: 5vw;
+        -webkit-box-shadow: 0 0 .5vw black;
+        box-shadow: 0 0 .5vw black;
+        border-radius: .5vw;
+        margin-bottom: 2vw;
+    }
+    .homepageInfo h1{
+        color: #0B4E2A;
+        font-size: 3.5vw;
+        font-weight: 600;
+        text-align: center;
+        margin-top: 50px;
+    }
+    .homepageInfo p{
+        font-size: 2.2vw;
+        padding:10px;
+        line-height: 150%;
     }
 }
 /*IPAD*/
@@ -300,7 +380,69 @@ body{
 }
 /*SMALL TABLETS, REGULAR SMARTPHONES*/
 @media(max-width:767px){
-    
+    .inner{
+        width: 70%;
+    }
+    .inner h1{
+        font-size: 7.5vw;
+        text-shadow: 0 0 1vw black;
+        margin:0;
+    }
+    .inner p{
+        color: white;
+        font-size: 3.5vw;
+        text-shadow: 0 0 1vw black;
+        margin: 0;
+        margin-top: 1vw;
+        margin-bottom: 1vw;
+    }
+    .sbaBTN{
+        font-size: 5.25vw;
+        display: inline-block;
+        margin-right:.5vw;
+        padding:0;
+        padding-left: 2vw;padding-right: 2vw;
+        height: 9vw;
+        line-height: 8.5vw;
+        -webkit-box-shadow: 0 0 .5vw black;
+        box-shadow: 0 0 .5vw black;
+        border-radius: .5vw;
+        margin-bottom: 2vw;
+    }
+    .homepageInfo h1{
+        color: #0B4E2A;
+        font-size: 4.25vw;
+        font-weight: 600;
+        text-align: center;
+        margin-top: 40px;
+    }
+    .homepageInfo p{
+        font-size: 3.5vw;
+        padding:10px;
+        line-height: 150%;
+    }
+    .sbaFooter .col-sm-2{
+        margin-bottom: 20px;
+    }
+    .sbaFooter .col-sm-3>a{
+        font-size: 6vw;
+        display: block;
+        width:100%;
+        line-height: 15vw;
+        height: 15vw;
+        padding-left: 0;
+        padding-left:20vw;
+    }
+    .sbaFooter .col-sm-4{
+        margin-bottom: 5vw;
+        margin-top: 5vw;
+    }
+    .greenBar1{
+        display: none!important;
+    }
+    .greenBar2{
+        display: block!important;
+    }
 }
 /*SMALLER SMARTPHONES*/
 @media(max-width:450px){
