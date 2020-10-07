@@ -5,9 +5,9 @@ document.body.style.msTransform =   'scale(100)';
 document.body.style.transform = 'scale(1)';
 document.body.style.zoom = screen.logicalXDPI / screen.deviceXDPI;
 });
-function toggleMenu(){
-    $('#mobileMenu').fadeToggle(200);
-}
+//function toggleMenu(){
+//    $('#mobileMenu').fadeToggle(200);
+//}
 
 //$(document).ready(function(){
 //        $(".carousel-control").click(function(){            
@@ -30,6 +30,11 @@ $(".newsupdates").hover(
     $('#newsupdates').toggleClass('showme');
   }, 
 );
+$(".resourcesBTN").hover(
+  function () {
+    $('#resourcesBTN').toggleClass('showme');
+  }, 
+);
 $("#whoweare").hover(
   function () {
     $('#whoweare').toggleClass('showme');
@@ -43,6 +48,11 @@ $("#accountingservices").hover(
 $("#newsupdates").hover(
   function () {
     $('#newsupdates').toggleClass('showme');
+  }, 
+);
+$("#resourcesBTN").hover(
+  function () {
+    $('#resourcesBTN').toggleClass('showme');
   }, 
 );
 
