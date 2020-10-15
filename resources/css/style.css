@@ -410,13 +410,15 @@ body{
     height: 100vh;
     width: 100vw;
     position: fixed;
-    z-index: 1000;
-    padding-top: 25vw;
+    z-index: 5000;
+    padding-top: 5vw;
+    top:0;
+    left:0;
 }
 #mobileMenu>a{
     color: white;
-    font-size: 8vw;
-    line-height: 16vw;
+    font-size: 7vw;
+    line-height: 14vw;
     display: block;
     width:100%;
     padding-left: 25px;

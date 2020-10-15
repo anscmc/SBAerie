@@ -5,9 +5,9 @@ document.body.style.msTransform =   'scale(100)';
 document.body.style.transform = 'scale(1)';
 document.body.style.zoom = screen.logicalXDPI / screen.deviceXDPI;
 });
-//function toggleMenu(){
-//    $('#mobileMenu').fadeToggle(200);
-//}
+function toggleMenu(){
+    $('#mobileMenu').fadeToggle(200);
+}
 
 //$(document).ready(function(){
 //        $(".carousel-control").click(function(){            
